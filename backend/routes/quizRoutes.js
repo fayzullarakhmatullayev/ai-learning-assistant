@@ -6,7 +6,7 @@ const router = Router();
 
 router.use(protect);
 router.get('/:documentId', quizController.getQuizzes);
-router.get('/qiuz/:id', quizController.getQuizById);
+router.get('/quiz/:id', quizController.getQuizById);
 router.post('/:id/submit', quizController.submitQuiz);
 router.get('/:id/results', quizController.getQuizResults);
 router.delete('/:id', quizController.deleteQuiz);
