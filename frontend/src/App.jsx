@@ -11,26 +11,10 @@ import FlashcardPage from './pages/Flashcards/FlashcardPage.jsx';
 import QuizTakePage from './pages/Quizzes/QuizTakePage.jsx';
 import QuizResultPage from './pages/Quizzes/QuizResultPage.jsx';
 import ProfilePage from './pages/Profile/ProfilePage.jsx';
-import { useEffect } from 'react';
 
 const App = () => {
   const isAuthenticated = true;
   const loading = false;
-
-  useEffect(() => {
-    const options = {
-      method: 'GET',
-      headers: {
-        Authorization:
-          'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OGMyYjg3MzU3NzllNWM2MjY4MDU2MSIsImlhdCI6MTc3MDgwMzMzNiwiZXhwIjoxNzcxNDA4MTM2fQ.Sd8NOiH2lWdLyKvNhLqKObEZ6lH05187ZVFD5VV7MXE'
-      }
-    };
-
-    fetch('http://localhost:8000/api/documents/698dc141a59c5d18cb0289d6', options)
-      .then((response) => response.json())
-      .then((response) => console.log(response))
-      .catch((err) => console.error(err));
-  }, []);
 
   if (loading) {
     return (
